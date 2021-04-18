@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Provider as StoreProvider } from 'react-redux';
+import styled from 'styled-components';
+import QuoteList from './components/QuoteList';
+import { initializeStore, initializeSagaMiddleware } from './store';
 
-function App() {
+const store = initializeStore();
+initializeSagaMiddleware();
+
+const Wrapper = styled.div`
+  background-color: #262c46;
+  min-height: 100vh;
+  padding: 40px;
+`;
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StoreProvider store={store}>
+      <Wrapper>
+        <QuoteList />
+      </Wrapper>
+    </StoreProvider>
   );
-}
+};
 
 export default App;
