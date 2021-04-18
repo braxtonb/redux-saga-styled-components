@@ -17,7 +17,7 @@ export function* removeQuote(action: AnyAction) {
         2,
       )}`,
     );
-    yield put({ type: REMOVE_QUOTE_ERROR__QUOTE });
+    yield put({ type: REMOVE_QUOTE_ERROR__QUOTE, payload: action.payload });
   }
 }
 

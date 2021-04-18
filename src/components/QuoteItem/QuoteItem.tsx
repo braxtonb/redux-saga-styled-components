@@ -49,21 +49,23 @@ const QuoteItem: React.FC<QuoteItemProps> = ({
   };
 
   return (
-    <Wrapper>
-      <Header>
-        <QuoteItemAvatar
-          imageURL={quote.person.imageURL ?? DEFAULT_IMAGE_URL}
-        />
+    <div>
+      <Wrapper>
+        <Header>
+          <QuoteItemAvatar
+            imageURL={quote.person.imageURL ?? DEFAULT_IMAGE_URL}
+          />
 
-        <QuoteItemRemove
-          handleQuoteItemRemoveClick={_handleQuoteItemRemoveClick}
-        />
-      </Header>
+          <QuoteItemRemove
+            handleQuoteItemRemoveClick={_handleQuoteItemRemoveClick}
+          />
+        </Header>
 
-      <QuoteItemMessage message={quote.message} />
+        <QuoteItemMessage message={quote.message} />
 
-      <QuoteItemPerson person={quote.person} />
-    </Wrapper>
+        <QuoteItemPerson person={quote.person} />
+      </Wrapper>
+    </div>
   );
 };
 

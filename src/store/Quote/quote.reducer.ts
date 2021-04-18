@@ -3,14 +3,14 @@ import {
   REMOVE_QUOTE_SUCCESS__QUOTE,
   REMOVE_QUOTE_ERROR__QUOTE,
 } from './quote.types';
-import { AnyAction } from 'redux';
 import { QUOTE_LIST } from '../../constants/quote-constants';
+import { ReduxStateQuote, ReduxActionQuote } from '../../constants/types';
 
-const INITIAL_STATE = {
+export const INITIAL_QUOTE_STATE: ReduxStateQuote = {
   quotes: QUOTE_LIST,
 };
 
-const reducer = (state = INITIAL_STATE, action: AnyAction) => {
+const reducer = (state = INITIAL_QUOTE_STATE, action: ReduxActionQuote) => {
   switch (action.type) {
     case REMOVE_QUOTE_REQUEST__QUOTE:
       return { ...state };
