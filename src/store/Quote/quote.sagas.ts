@@ -4,9 +4,9 @@ import {
   REMOVE_QUOTE_ERROR__QUOTE,
   REMOVE_QUOTE_SUCCESS__QUOTE,
 } from './quote.types';
-import { AnyAction } from 'redux';
+import { ReduxActionQuote } from '../../constants/types';
 
-export function* removeQuote(action: AnyAction) {
+export function* removeQuote(action: ReduxActionQuote) {
   try {
     yield put({ type: REMOVE_QUOTE_SUCCESS__QUOTE, payload: action.payload });
   } catch (error) {
