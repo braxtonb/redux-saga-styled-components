@@ -29,7 +29,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "echo \"[Husky] running pre commit hook\" && npm test"
+      "pre-commit": "echo \"[Husky] running pre commit hook\" && npm run test"
     }
   },
   "eslintConfig": {
