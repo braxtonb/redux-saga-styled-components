@@ -30,7 +30,7 @@ const Header = styled.div`
   width: 100%;
 `;
 
-interface QuoteItemProps {
+export interface QuoteItemProps {
   // variables
   quote: Quote;
   // functions
@@ -50,10 +50,11 @@ const QuoteItem: React.FC<QuoteItemProps> = ({
 
   return (
     <div>
-      <Wrapper>
+      <Wrapper role="listitem">
         <Header>
           <QuoteItemAvatar
             imageURL={quote.person.imageURL ?? DEFAULT_IMAGE_URL}
+            alt={quote.person.name}
           />
 
           <QuoteItemRemove

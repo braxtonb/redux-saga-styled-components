@@ -25,7 +25,7 @@ const PersonName = styled.p`
   text-transform: uppercase;
 `;
 
-interface QuoteItemPersonProps {
+export interface QuoteItemPersonProps {
   person: Person;
 }
 

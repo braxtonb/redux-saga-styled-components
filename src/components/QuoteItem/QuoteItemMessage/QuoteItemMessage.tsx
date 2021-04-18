@@ -11,7 +11,7 @@ const Message = styled.p`
   }
 `;
 
-interface QuoteItemMessageProps {
+export interface QuoteItemMessageProps {
   message: string;
 }
 

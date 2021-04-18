@@ -1,17 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const RemoveIcon = styled.div`
+const RemoveIcon = styled.button`
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
   color: red;
   cursor: pointer;
-  border-radius: 8px;
   font-size: 2em;
+  padding: 0;
   position: absolute;
   right: 0;
   top: 0;
+
+  &:focus {
+    outline: none;
+  }
 `;
 
-interface QuoteItemRemoveProps {
+export interface QuoteItemRemoveProps {
   // functions
   handleQuoteItemRemoveClick: () => void;
 }

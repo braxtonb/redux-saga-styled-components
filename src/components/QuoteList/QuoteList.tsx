@@ -19,7 +19,7 @@ const Wrapper = styled.div`
   }
 `;
 
-interface QuoteListProps {
+export interface QuoteListProps {
   // variables
   quotes: Quote[];
   // functions

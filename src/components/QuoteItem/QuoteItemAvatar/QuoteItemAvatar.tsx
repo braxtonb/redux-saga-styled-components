@@ -24,7 +24,7 @@ const Avatar = styled.img`
   height: 100%;
 `;
 
-interface QuoteItemAvatarProps {
+export interface QuoteItemAvatarProps {
   alt?: string;
   imageURL: string;
 }
