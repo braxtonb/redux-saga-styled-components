@@ -23,8 +23,14 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll=false",
+    "test:watch": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "echo \"[Husky] running pre commit hook\" && npm test"
+    }
   },
   "eslintConfig": {
     "extends": [
@@ -46,6 +52,7 @@
   },
   "devDependencies": {
     "@types/styled-components": "^5.1.9",
+    "husky": "^6.0.0",
     "redux-devtools-extension": "^2.13.9"
   }
 }
