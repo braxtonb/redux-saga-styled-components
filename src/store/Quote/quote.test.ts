@@ -12,9 +12,9 @@ describe('removeQuote saga test', () => {
   const generator = removeQuote(action);
   const emptyGenerator = emptyGeneratorFn();
 
-  it(`should dispatch a ${REMOVE_QUOTE_SUCCESS__QUOTE} action`, () => {
+  it(`should dispatch a ${action.type} action`, () => {
     expect(generator.next().value).toStrictEqual(
-      put({ type: REMOVE_QUOTE_SUCCESS__QUOTE, payload: action.payload }),
+      put({ ...action }),
     );
   });
 
